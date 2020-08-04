@@ -1,0 +1,307 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"istio-ingressgateway","install.operator.istio.io/owning-resource":"installed-state-canary","install.operator.istio.io/owning-resource-namespace":"istio-system","istio":"ingressgateway","operator.istio.io/component":"IngressGateways","operator.istio.io/managed":"Reconcile","operator.istio.io/version":"1.6.5","release":"istio"},"name":"istio-ingressgateway","namespace":"istio-system"},"spec":{"ports":[{"name":"status-port","port":15021,"targetPort":15021},{"name":"http-adeo","port":80,"targetPort":80},{"name":"http-nais","port":81,"targetPort":81},{"name":"http-nav","port":82,"targetPort":82},{"name":"http-navlabs","port":83,"targetPort":83},{"name":"http-devnav","port":84,"targetPort":84},{"name":"http-devadeo","port":85,"targetPort":85},{"name":"https-adeo","port":443,"targetPort":443},{"name":"https-nais","port":444,"targetPort":444},{"name":"https-nav","port":445,"targetPort":445},{"name":"https-navlabs","port":446,"targetPort":446},{"name":"https-devnav","port":447,"targetPort":447},{"name":"https-devadeo","port":448,"targetPort":448}],"selector":{"app":"istio-ingressgateway","istio":"ingressgateway"},"type":"ClusterIP"}}
+    creationTimestamp: "2019-09-13T08:24:54Z"
+    labels:
+      app: istio-ingressgateway
+      chart: gateways
+      heritage: Tiller
+      install.operator.istio.io/owning-resource: installed-state-canary
+      install.operator.istio.io/owning-resource-namespace: istio-system
+      istio: ingressgateway
+      operator.istio.io/component: IngressGateways
+      operator.istio.io/managed: Reconcile
+      operator.istio.io/version: 1.6.5
+      release: istio
+    name: istio-ingressgateway
+    namespace: istio-system
+    resourceVersion: "178168255"
+    selfLink: /api/v1/namespaces/istio-system/services/istio-ingressgateway
+    uid: f6a0ba6e-d5ff-11e9-be74-4201ac10000a
+  spec:
+    clusterIP: 192.168.112.40
+    ports:
+    - name: status-port
+      port: 15021
+      protocol: TCP
+      targetPort: 15021
+    - name: http-adeo
+      port: 80
+      protocol: TCP
+      targetPort: 80
+    - name: http-nais
+      port: 81
+      protocol: TCP
+      targetPort: 81
+    - name: http-nav
+      port: 82
+      protocol: TCP
+      targetPort: 82
+    - name: http-navlabs
+      port: 83
+      protocol: TCP
+      targetPort: 83
+    - name: http-devnav
+      port: 84
+      protocol: TCP
+      targetPort: 84
+    - name: http-devadeo
+      port: 85
+      protocol: TCP
+      targetPort: 85
+    - name: https-adeo
+      port: 443
+      protocol: TCP
+      targetPort: 443
+    - name: https-nais
+      port: 444
+      protocol: TCP
+      targetPort: 444
+    - name: https-nav
+      port: 445
+      protocol: TCP
+      targetPort: 445
+    - name: https-navlabs
+      port: 446
+      protocol: TCP
+      targetPort: 446
+    - name: https-devnav
+      port: 447
+      protocol: TCP
+      targetPort: 447
+    - name: https-devadeo
+      port: 448
+      protocol: TCP
+      targetPort: 448
+    selector:
+      app: istio-ingressgateway
+      istio: ingressgateway
+      release: istio
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/load-balancer-type: Internal
+      cloud.google.com/neg: '{"exposed_ports": {"443":{}}}'
+      cloud.google.com/neg-status: '{"network_endpoint_groups":{"443":"k8s1-e01be32e-istio-system-istio-ingressgateway-ade-44-976c3e85"},"zones":["europe-north1-a","europe-north1-b","europe-north1-c"]}'
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"cloud.google.com/load-balancer-type":"Internal","cloud.google.com/neg":"{\"exposed_ports\": {\"443\":{}}}"},"labels":{"istio":"ingressgateway","nais.io/created-by":"nais-yaml"},"name":"istio-ingressgateway-adeo","namespace":"istio-system"},"spec":{"loadBalancerIP":"10.6.8.100","ports":[{"name":"https","nodePort":32443,"port":443,"protocol":"TCP","targetPort":443},{"name":"http","nodePort":32080,"port":80,"protocol":"TCP","targetPort":80}],"selector":{"istio":"ingressgateway"},"type":"LoadBalancer"}}
+    creationTimestamp: "2019-08-27T07:49:05Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      istio: ingressgateway
+      nais.io/created-by: nais-yaml
+    name: istio-ingressgateway-adeo
+    namespace: istio-system
+    resourceVersion: "178181358"
+    selfLink: /api/v1/namespaces/istio-system/services/istio-ingressgateway-adeo
+    uid: 249a081a-c89f-11e9-8a70-4201ac100008
+  spec:
+    clusterIP: 192.168.94.42
+    externalTrafficPolicy: Cluster
+    loadBalancerIP: 10.6.8.100
+    ports:
+    - name: https
+      nodePort: 32443
+      port: 443
+      protocol: TCP
+      targetPort: 443
+    - name: http
+      nodePort: 32080
+      port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      istio: ingressgateway
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 10.6.8.100
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/load-balancer-type: Internal
+      cloud.google.com/neg: '{"exposed_ports": {"443":{}}}'
+      cloud.google.com/neg-status: '{"network_endpoint_groups":{"443":"k8s1-e01be32e-istio-syste-istio-ingressgateway-deva-44-2c56561c"},"zones":["europe-north1-a","europe-north1-b","europe-north1-c"]}'
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"cloud.google.com/load-balancer-type":"Internal","cloud.google.com/neg":"{\"exposed_ports\": {\"443\":{}}}"},"labels":{"istio":"ingressgateway","nais.io/created-by":"nais-yaml"},"name":"istio-ingressgateway-devadeo","namespace":"istio-system"},"spec":{"loadBalancerIP":"10.6.8.104","ports":[{"name":"https","nodePort":32448,"port":443,"protocol":"TCP","targetPort":448},{"name":"http","nodePort":32085,"port":80,"protocol":"TCP","targetPort":85}],"selector":{"istio":"ingressgateway"},"type":"LoadBalancer"}}
+    creationTimestamp: "2020-06-25T19:40:22Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      istio: ingressgateway
+      nais.io/created-by: nais-yaml
+    name: istio-ingressgateway-devadeo
+    namespace: istio-system
+    resourceVersion: "150435024"
+    selfLink: /api/v1/namespaces/istio-system/services/istio-ingressgateway-devadeo
+    uid: 14c531d3-87cd-4787-bb99-8413d2c1c36c
+  spec:
+    clusterIP: 192.168.102.213
+    externalTrafficPolicy: Cluster
+    loadBalancerIP: 10.6.8.104
+    ports:
+    - name: https
+      nodePort: 32448
+      port: 443
+      protocol: TCP
+      targetPort: 448
+    - name: http
+      nodePort: 32085
+      port: 80
+      protocol: TCP
+      targetPort: 85
+    selector:
+      istio: ingressgateway
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 10.6.8.104
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/load-balancer-type: Internal
+      cloud.google.com/neg: '{"exposed_ports": {"443":{}}}'
+      cloud.google.com/neg-status: '{"network_endpoint_groups":{"443":"k8s1-e01be32e-istio-syste-istio-ingressgateway-devn-44-bd2d4458"},"zones":["europe-north1-a","europe-north1-b","europe-north1-c"]}'
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"cloud.google.com/load-balancer-type":"Internal","cloud.google.com/neg":"{\"exposed_ports\": {\"443\":{}}}"},"labels":{"istio":"ingressgateway","nais.io/created-by":"nais-yaml"},"name":"istio-ingressgateway-devnav","namespace":"istio-system"},"spec":{"loadBalancerIP":"10.6.8.103","ports":[{"name":"https","nodePort":32447,"port":443,"protocol":"TCP","targetPort":447},{"name":"http","nodePort":32084,"port":80,"protocol":"TCP","targetPort":84}],"selector":{"istio":"ingressgateway"},"type":"LoadBalancer"}}
+    creationTimestamp: "2020-06-25T19:40:21Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      istio: ingressgateway
+      nais.io/created-by: nais-yaml
+    name: istio-ingressgateway-devnav
+    namespace: istio-system
+    resourceVersion: "150434685"
+    selfLink: /api/v1/namespaces/istio-system/services/istio-ingressgateway-devnav
+    uid: ae8dab86-8324-4fdb-8b16-3eee74d47ab2
+  spec:
+    clusterIP: 192.168.118.45
+    externalTrafficPolicy: Cluster
+    loadBalancerIP: 10.6.8.103
+    ports:
+    - name: https
+      nodePort: 32447
+      port: 443
+      protocol: TCP
+      targetPort: 447
+    - name: http
+      nodePort: 32084
+      port: 80
+      protocol: TCP
+      targetPort: 84
+    selector:
+      istio: ingressgateway
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 10.6.8.103
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/load-balancer-type: Internal
+      cloud.google.com/neg: '{"exposed_ports": {"443":{}}}'
+      cloud.google.com/neg-status: '{"network_endpoint_groups":{"443":"k8s1-e01be32e-istio-system-istio-ingressgateway-nai-44-362bf0a3"},"zones":["europe-north1-a","europe-north1-b","europe-north1-c"]}'
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"cloud.google.com/load-balancer-type":"Internal","cloud.google.com/neg":"{\"exposed_ports\": {\"443\":{}}}"},"labels":{"istio":"ingressgateway","nais.io/created-by":"nais-yaml"},"name":"istio-ingressgateway-nais","namespace":"istio-system"},"spec":{"loadBalancerIP":"10.6.8.101","ports":[{"name":"https","nodePort":32444,"port":443,"protocol":"TCP","targetPort":444},{"name":"http","nodePort":32081,"port":80,"protocol":"TCP","targetPort":81}],"selector":{"istio":"ingressgateway"},"type":"LoadBalancer"}}
+    creationTimestamp: "2019-08-27T07:49:05Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      istio: ingressgateway
+      nais.io/created-by: nais-yaml
+    name: istio-ingressgateway-nais
+    namespace: istio-system
+    resourceVersion: "63183700"
+    selfLink: /api/v1/namespaces/istio-system/services/istio-ingressgateway-nais
+    uid: 24a4a54e-c89f-11e9-8a70-4201ac100008
+  spec:
+    clusterIP: 192.168.64.157
+    externalTrafficPolicy: Cluster
+    loadBalancerIP: 10.6.8.101
+    ports:
+    - name: https
+      nodePort: 32444
+      port: 443
+      protocol: TCP
+      targetPort: 444
+    - name: http
+      nodePort: 32081
+      port: 80
+      protocol: TCP
+      targetPort: 81
+    selector:
+      istio: ingressgateway
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 10.6.8.101
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/load-balancer-type: Internal
+      cloud.google.com/neg: '{"exposed_ports": {"443":{}}}'
+      cloud.google.com/neg-status: '{"network_endpoint_groups":{"443":"k8s1-e01be32e-istio-system-istio-ingressgateway-nav-44-df065a46"},"zones":["europe-north1-a","europe-north1-b","europe-north1-c"]}'
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"cloud.google.com/load-balancer-type":"Internal","cloud.google.com/neg":"{\"exposed_ports\": {\"443\":{}}}"},"labels":{"istio":"ingressgateway","nais.io/created-by":"nais-yaml"},"name":"istio-ingressgateway-nav","namespace":"istio-system"},"spec":{"loadBalancerIP":"10.6.8.102","ports":[{"name":"https","nodePort":32445,"port":443,"protocol":"TCP","targetPort":445},{"name":"http","nodePort":32082,"port":80,"protocol":"TCP","targetPort":82}],"selector":{"istio":"ingressgateway"},"type":"LoadBalancer"}}
+    creationTimestamp: "2019-08-26T11:33:06Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      istio: ingressgateway
+      nais.io/created-by: nais-yaml
+    name: istio-ingressgateway-nav
+    namespace: istio-system
+    resourceVersion: "178093858"
+    selfLink: /api/v1/namespaces/istio-system/services/istio-ingressgateway-nav
+    uid: 461a5d95-c7f5-11e9-8a70-4201ac100008
+  spec:
+    clusterIP: 192.168.125.158
+    externalTrafficPolicy: Cluster
+    loadBalancerIP: 10.6.8.102
+    ports:
+    - name: https
+      nodePort: 32445
+      port: 443
+      protocol: TCP
+      targetPort: 445
+    - name: http
+      nodePort: 32082
+      port: 80
+      protocol: TCP
+      targetPort: 82
+    selector:
+      istio: ingressgateway
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 10.6.8.102
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

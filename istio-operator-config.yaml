@@ -1,0 +1,110 @@
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+metadata:
+  namespace: istio-system
+spec:
+  components:
+    base:
+      enabled: true
+    ingressGateways:
+    - name: istio-ingressgateway
+      enabled: true
+      k8s:
+        hpaSpec:
+          maxReplicas: 4
+          minReplicas: 2
+    pilot:
+      enabled: true
+      k8s:
+        hpaSpec:
+          maxReplicas: 4
+          minReplicas: 2
+    policy:
+      enabled: true
+      k8s:
+        hpaSpec:
+          maxReplicas: 4
+          minReplicas: 2
+        replicaCount: 2
+    telemetry:
+      enabled: true
+      k8s:
+        hpaSpec:
+          maxReplicas: 4
+          minReplicas: 2
+        replicaCount: 2
+    citadel:
+      enabled: true
+
+  addonComponents:
+    prometheus:
+      enabled: true
+      k8s:
+        replicaCount: 1
+  values:
+    gateways:
+      istio-ingressgateway:
+        applicationPorts: ""
+        externalIPs: []
+        loadBalancerIP: ""
+        loadBalancerSourceRanges: []
+        ports:
+        - name: status-port
+          port: 15021
+          targetPort: 15021
+        - name: http-adeo
+          port: 80
+          targetPort: 80
+        - name: http-nais
+          port: 81
+          targetPort: 81
+        - name: http-nav
+          port: 82
+          targetPort: 82
+        - name: http-navlabs
+          port: 83
+          targetPort: 83
+        - name: http-devnav
+          port: 84
+          targetPort: 84
+        - name: http-devadeo
+          port: 85
+          targetPort: 85
+        - name: https-adeo
+          port: 443
+          targetPort: 443
+        - name: https-nais
+          port: 444
+          targetPort: 444
+        - name: https-nav
+          port: 445
+          targetPort: 445
+        - name: https-navlabs
+          port: 446
+          targetPort: 446
+        - name: https-devnav
+          port: 447
+          targetPort: 447
+        - name: https-devadeo
+          port: 448
+          targetPort: 448
+        secretVolumes:
+        - mountPath: /etc/istio/ingressgateway-certs
+          name: ingressgateway-certs
+          secretName: istio-ingressgateway-certs
+        - mountPath: /etc/istio/ingressgateway-ca-certs
+          name: ingressgateway-ca-certs
+          secretName: istio-ingressgateway-ca-certs
+        type: ClusterIP
+    meshConfig:
+      accessLogFile: /dev/stdout
+      accessLogEncoding: TEXT
+      outboundTrafficPolicy:
+        mode: REGISTRY_ONLY
+    global:
+      proxy:
+        privileged: false
+        statusPort: 15021
+    sidecarInjectorWebhook:
+      rewriteAppHTTPProbe: true
+

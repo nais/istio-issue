@@ -1,0 +1,191 @@
+apiVersion: v1
+items:
+- apiVersion: networking.istio.io/v1beta1
+  kind: Gateway
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"networking.istio.io/v1beta1","kind":"Gateway","metadata":{"annotations":{},"creationTimestamp":"2019-09-05T08:32:30Z","generation":3,"labels":{"nais.io/created-by":"nais-yaml"},"name":"ingress-gateway-dev-adeo-no","namespace":"istio-system","resourceVersion":"178130324","selfLink":"/apis/networking.istio.io/v1beta1/namespaces/istio-system/gateways/ingress-gateway-dev-adeo-no","uid":"b305c012-cfb7-11e9-93a9-4201ac10000b"},"spec":{"selector":{"istio":"ingressgateway"},"servers":[{"hosts":["*"],"port":{"name":"https","number":443,"protocol":"HTTPS"},"tls":{"mode":"SIMPLE","privateKey":"/etc/istio/ingressgateway-certs/adeo.key","serverCertificate":"/etc/istio/ingressgateway-certs/adeo.crt"}},{"hosts":["*"],"port":{"name":"http","number":80,"protocol":"HTTP"},"tls":{"httpsRedirect":true}}]}}
+    creationTimestamp: "2020-08-04T10:34:33Z"
+    generation: 3
+    labels:
+      nais.io/created-by: nais-yaml
+    name: ingress-gateway-dev-adeo-no
+    namespace: istio-system
+    resourceVersion: "178180804"
+    selfLink: /apis/networking.istio.io/v1beta1/namespaces/istio-system/gateways/ingress-gateway-dev-adeo-no
+    uid: 9384a2b7-6967-48df-bbbd-02cfa497e872
+  spec:
+    selector:
+      istio: ingressgateway
+    servers:
+    - hosts:
+      - '*'
+      port:
+        name: https
+        number: 443
+        protocol: HTTPS
+      tls:
+        mode: SIMPLE
+        privateKey: /etc/istio/ingressgateway-certs/adeo.key
+        serverCertificate: /etc/istio/ingressgateway-certs/adeo.crt
+    - hosts:
+      - '*'
+      port:
+        name: http
+        number: 80
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
+- apiVersion: networking.istio.io/v1beta1
+  kind: Gateway
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"networking.istio.io/v1alpha3","kind":"Gateway","metadata":{"annotations":{},"labels":{"nais.io/created-by":"nais-yaml"},"name":"ingress-gateway-dev-nav-no","namespace":"istio-system"},"spec":{"selector":{"istio":"ingressgateway"},"servers":[{"hosts":["*"],"port":{"name":"https","number":445,"protocol":"HTTPS"},"tls":{"mode":"SIMPLE","privateKey":"/etc/istio/ingressgateway-certs/nav.key","serverCertificate":"/etc/istio/ingressgateway-certs/nav.crt"}},{"hosts":["*"],"port":{"name":"http","number":82,"protocol":"HTTP"},"tls":{"httpsRedirect":true}}]}}
+    creationTimestamp: "2019-09-05T08:32:30Z"
+    generation: 3
+    labels:
+      nais.io/created-by: nais-yaml
+    name: ingress-gateway-dev-nav-no
+    namespace: istio-system
+    resourceVersion: "178180806"
+    selfLink: /apis/networking.istio.io/v1beta1/namespaces/istio-system/gateways/ingress-gateway-dev-nav-no
+    uid: b312d22c-cfb7-11e9-93a9-4201ac10000b
+  spec:
+    selector:
+      istio: ingressgateway
+    servers:
+    - hosts:
+      - '*'
+      port:
+        name: https
+        number: 445
+        protocol: HTTPS
+      tls:
+        mode: SIMPLE
+        privateKey: /etc/istio/ingressgateway-certs/nav.key
+        serverCertificate: /etc/istio/ingressgateway-certs/nav.crt
+    - hosts:
+      - '*'
+      port:
+        name: http
+        number: 82
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
+- apiVersion: networking.istio.io/v1beta1
+  kind: Gateway
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"networking.istio.io/v1alpha3","kind":"Gateway","metadata":{"annotations":{},"labels":{"nais.io/created-by":"nais-yaml"},"name":"ingress-gateway-devadeo-no","namespace":"istio-system"},"spec":{"selector":{"istio":"ingressgateway"},"servers":[{"hosts":["*"],"port":{"name":"https","number":448,"protocol":"HTTPS"},"tls":{"mode":"SIMPLE","privateKey":"/etc/istio/ingressgateway-certs/devadeo.key","serverCertificate":"/etc/istio/ingressgateway-certs/devadeo.crt"}},{"hosts":["*"],"port":{"name":"http","number":85,"protocol":"HTTP"},"tls":{"httpsRedirect":true}}]}}
+    creationTimestamp: "2020-06-25T19:37:58Z"
+    generation: 1
+    labels:
+      nais.io/created-by: nais-yaml
+    name: ingress-gateway-devadeo-no
+    namespace: istio-system
+    resourceVersion: "152793066"
+    selfLink: /apis/networking.istio.io/v1beta1/namespaces/istio-system/gateways/ingress-gateway-devadeo-no
+    uid: 3b9f1e7a-4ee8-4d8e-b495-8780a132b3df
+  spec:
+    selector:
+      istio: ingressgateway
+    servers:
+    - hosts:
+      - '*'
+      port:
+        name: https
+        number: 448
+        protocol: HTTPS
+      tls:
+        mode: SIMPLE
+        privateKey: /etc/istio/ingressgateway-certs/devadeo.key
+        serverCertificate: /etc/istio/ingressgateway-certs/devadeo.crt
+    - hosts:
+      - '*'
+      port:
+        name: http
+        number: 85
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
+- apiVersion: networking.istio.io/v1beta1
+  kind: Gateway
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"networking.istio.io/v1alpha3","kind":"Gateway","metadata":{"annotations":{},"labels":{"nais.io/created-by":"nais-yaml"},"name":"ingress-gateway-devnav-no","namespace":"istio-system"},"spec":{"selector":{"istio":"ingressgateway"},"servers":[{"hosts":["*"],"port":{"name":"https","number":447,"protocol":"HTTPS"},"tls":{"mode":"SIMPLE","privateKey":"/etc/istio/ingressgateway-certs/devnav.key","serverCertificate":"/etc/istio/ingressgateway-certs/devnav.crt"}},{"hosts":["*"],"port":{"name":"http","number":84,"protocol":"HTTP"},"tls":{"httpsRedirect":true}}]}}
+    creationTimestamp: "2020-06-25T19:37:57Z"
+    generation: 1
+    labels:
+      nais.io/created-by: nais-yaml
+    name: ingress-gateway-devnav-no
+    namespace: istio-system
+    resourceVersion: "152793064"
+    selfLink: /apis/networking.istio.io/v1beta1/namespaces/istio-system/gateways/ingress-gateway-devnav-no
+    uid: 59a2df0b-c6fb-4c11-9a62-3caa909eabc2
+  spec:
+    selector:
+      istio: ingressgateway
+    servers:
+    - hosts:
+      - '*'
+      port:
+        name: https
+        number: 447
+        protocol: HTTPS
+      tls:
+        mode: SIMPLE
+        privateKey: /etc/istio/ingressgateway-certs/devnav.key
+        serverCertificate: /etc/istio/ingressgateway-certs/devnav.crt
+    - hosts:
+      - '*'
+      port:
+        name: http
+        number: 84
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
+- apiVersion: networking.istio.io/v1beta1
+  kind: Gateway
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"networking.istio.io/v1alpha3","kind":"Gateway","metadata":{"annotations":{},"labels":{"nais.io/created-by":"nais-yaml"},"name":"ingress-gateway-nais-io","namespace":"istio-system"},"spec":{"selector":{"istio":"ingressgateway"},"servers":[{"hosts":["*"],"port":{"name":"https","number":444,"protocol":"HTTPS"},"tls":{"mode":"SIMPLE","privateKey":"/etc/istio/ingressgateway-certs/nais.key","serverCertificate":"/etc/istio/ingressgateway-certs/nais.crt"}},{"hosts":["*"],"port":{"name":"http","number":81,"protocol":"HTTP"},"tls":{"httpsRedirect":true}}]}}
+    creationTimestamp: "2019-09-04T08:01:28Z"
+    generation: 4
+    labels:
+      nais.io/created-by: nais-yaml
+    name: ingress-gateway-nais-io
+    namespace: istio-system
+    resourceVersion: "23495834"
+    selfLink: /apis/networking.istio.io/v1beta1/namespaces/istio-system/gateways/ingress-gateway-nais-io
+    uid: 32fd79d4-ceea-11e9-be74-4201ac10000a
+  spec:
+    selector:
+      istio: ingressgateway
+    servers:
+    - hosts:
+      - '*'
+      port:
+        name: https
+        number: 444
+        protocol: HTTPS
+      tls:
+        mode: SIMPLE
+        privateKey: /etc/istio/ingressgateway-certs/nais.key
+        serverCertificate: /etc/istio/ingressgateway-certs/nais.crt
+    - hosts:
+      - '*'
+      port:
+        name: http
+        number: 81
+        protocol: HTTP
+      tls:
+        httpsRedirect: true
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

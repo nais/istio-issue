@@ -1,0 +1,600 @@
+2020-08-04T11:31:11.092440Z	info	FLAG: --appNamespace=""
+2020-08-04T11:31:11.092483Z	info	FLAG: --caCertFile=""
+2020-08-04T11:31:11.092490Z	info	FLAG: --clusterID="Kubernetes"
+2020-08-04T11:31:11.092494Z	info	FLAG: --clusterRegistriesNamespace="istio-system"
+2020-08-04T11:31:11.092499Z	info	FLAG: --configDir=""
+2020-08-04T11:31:11.092502Z	info	FLAG: --consulserverURL=""
+2020-08-04T11:31:11.092507Z	info	FLAG: --ctrlz_address="localhost"
+2020-08-04T11:31:11.092517Z	info	FLAG: --ctrlz_port="9876"
+2020-08-04T11:31:11.092522Z	info	FLAG: --disable-install-crds="true"
+2020-08-04T11:31:11.092525Z	info	FLAG: --domain="cluster.local"
+2020-08-04T11:31:11.092528Z	info	FLAG: --grpcAddr=":15010"
+2020-08-04T11:31:11.092531Z	info	FLAG: --help="false"
+2020-08-04T11:31:11.092533Z	info	FLAG: --httpAddr=":8080"
+2020-08-04T11:31:11.092537Z	info	FLAG: --httpsAddr=":15017"
+2020-08-04T11:31:11.092542Z	info	FLAG: --keepaliveInterval="30s"
+2020-08-04T11:31:11.092545Z	info	FLAG: --keepaliveMaxServerConnectionAge="30m0s"
+2020-08-04T11:31:11.092548Z	info	FLAG: --keepaliveTimeout="10s"
+2020-08-04T11:31:11.092552Z	info	FLAG: --kubeconfig=""
+2020-08-04T11:31:11.092555Z	info	FLAG: --log_as_json="false"
+2020-08-04T11:31:11.092558Z	info	FLAG: --log_caller=""
+2020-08-04T11:31:11.092561Z	info	FLAG: --log_output_level="default:info"
+2020-08-04T11:31:11.092564Z	info	FLAG: --log_rotate=""
+2020-08-04T11:31:11.092568Z	info	FLAG: --log_rotate_max_age="30"
+2020-08-04T11:31:11.092571Z	info	FLAG: --log_rotate_max_backups="1000"
+2020-08-04T11:31:11.092575Z	info	FLAG: --log_rotate_max_size="104857600"
+2020-08-04T11:31:11.092578Z	info	FLAG: --log_stacktrace_level="default:none"
+2020-08-04T11:31:11.092592Z	info	FLAG: --log_target="[stdout]"
+2020-08-04T11:31:11.092609Z	info	FLAG: --mcpInitialConnWindowSize="1048576"
+2020-08-04T11:31:11.092614Z	info	FLAG: --mcpInitialWindowSize="1048576"
+2020-08-04T11:31:11.092618Z	info	FLAG: --mcpMaxMsgSize="4194304"
+2020-08-04T11:31:11.092623Z	info	FLAG: --meshConfig="/etc/istio/config/mesh"
+2020-08-04T11:31:11.092628Z	info	FLAG: --monitoringAddr=":15014"
+2020-08-04T11:31:11.092633Z	info	FLAG: --namespace="istio-system"
+2020-08-04T11:31:11.092638Z	info	FLAG: --networksConfig="/etc/istio/config/meshNetworks"
+2020-08-04T11:31:11.092647Z	info	FLAG: --plugins="[authn,authz,health,mixer]"
+2020-08-04T11:31:11.092659Z	info	FLAG: --profile="true"
+2020-08-04T11:31:11.092672Z	info	FLAG: --registries="[Kubernetes]"
+2020-08-04T11:31:11.092681Z	info	FLAG: --resync="1m0s"
+2020-08-04T11:31:11.092684Z	info	FLAG: --tlsCertFile=""
+2020-08-04T11:31:11.092688Z	info	FLAG: --tlsKeyFile=""
+2020-08-04T11:31:11.092691Z	info	FLAG: --trust-domain="cluster.local"
+2020-08-04T11:31:11.099333Z	info	mesh configuration: {
+    "mixerCheckServer": "istio-policy.istio-system.svc.cluster.local:15004",
+    "disablePolicyChecks": true,
+    "disableMixerHttpReports": true,
+    "proxyListenPort": 15001,
+    "connectTimeout": "10s",
+    "protocolDetectionTimeout": "0.100s",
+    "ingressClass": "istio",
+    "ingressService": "istio-ingressgateway",
+    "ingressControllerMode": "STRICT",
+    "enableTracing": true,
+    "accessLogFile": "/dev/stdout",
+    "defaultConfig": {
+        "configPath": "./etc/istio/proxy",
+        "binaryPath": "/usr/local/bin/envoy",
+        "serviceCluster": "istio-proxy",
+        "drainDuration": "45s",
+        "parentShutdownDuration": "60s",
+        "discoveryAddress": "istiod-canary.istio-system.svc:15012",
+        "proxyAdminPort": 15000,
+        "statNameLength": 189,
+        "concurrency": 2,
+        "tracing": {
+            "zipkin": {
+                "address": "zipkin.istio-system:9411"
+            }
+        },
+        "envoyAccessLogService": {
+
+        },
+        "envoyMetricsService": {
+
+        },
+        "proxyMetadata": {
+            "DNS_AGENT": ""
+        },
+        "statusPort": 15020
+    },
+    "outboundTrafficPolicy": {
+
+    },
+    "sdsUdsPath": "unix:/etc/istio/proxy/SDS",
+    "enableAutoMtls": true,
+    "trustDomain": "cluster.local",
+    "trustDomainAliases": [
+    ],
+    "defaultServiceExportTo": [
+        "*"
+    ],
+    "defaultVirtualServiceExportTo": [
+        "*"
+    ],
+    "defaultDestinationRuleExportTo": [
+        "*"
+    ],
+    "rootNamespace": "istio-system",
+    "localityLbSetting": {
+        "enabled": true
+    },
+    "dnsRefreshRate": "5s",
+    "reportBatchMaxEntries": 100,
+    "reportBatchMaxTime": "1s",
+    "certificates": [
+    ],
+    "thriftConfig": {
+
+    },
+    "serviceSettings": [
+    ],
+    "enablePrometheusMerge": false
+}
+2020-08-04T11:31:11.099367Z	info	version: 1.6.5-f508fdd78eb0d3444e2bc2b3f36966d904c5db52-dirty-Modified
+2020-08-04T11:31:11.100380Z	info	flags: 
+2020-08-04T11:31:11.100569Z	info	mesh networks configuration: {
+   "networks": {
+   }
+}
+2020-08-04T11:31:11.100685Z	info	No certificates specified, skipping K8S DNS certificate controller
+2020-08-04T11:31:11.101947Z	info	CRD controller watching namespaces ""
+2020-08-04T11:31:11.407350Z	info	Ingress controller watching namespaces ""
+2020-08-04T11:31:12.909735Z	info	Skipping IngressClass, resource not supported
+2020-08-04T11:31:12.910037Z	warn	Config Store &{0xc0001bc500 cluster.local 0xc0003fe840 0xc0009f9860 0xc00006f9e0 [] [] <nil>} cannot track distribution in aggregate: this SetLedger operation is not supported by kube ingress controller
+2020-08-04T11:31:12.910093Z	info	Adding Kubernetes registry adapter
+2020-08-04T11:31:12.910114Z	info	Service controller watching namespace "" for services, endpoints, nodes and pods, refresh 1m0s
+2020-08-04T11:31:12.910460Z	info	JWT policy is third-party-jwt
+2020-08-04T11:31:12.910557Z	info	Use self-signed certificate as the CA certificate
+2020-08-04T11:31:12.963246Z	info	pkica	Load signing key and cert from existing secret istio-system:istio-ca-secret
+2020-08-04T11:31:12.963869Z	info	pkica	Using existing public key: -----BEGIN CERTIFICATE-----
+MIIC3TCCAcWgAwIBAgIQNMB+IlIU8tlnmY7e8ojzcTANBgkqhkiG9w0BAQsFADAY
+MRYwFAYDVQQKEw1jbHVzdGVyLmxvY2FsMB4XDTE5MDgxOTE0MTQyOFoXDTI5MDgx
+NjE0MTQyOFowGDEWMBQGA1UEChMNY2x1c3Rlci5sb2NhbDCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBANWprSogx8jLmzXhjsJ/Gm5sT4qNLukVJGv8/H+P
+82lxeedjeWpHPS+0DFB9VkxYSFLjBbqKri9Z2IF8icl7ikXztn08UrcWOpH4XJSx
+AWd7yP1oYUArbkW8jtP+olC4plCofYDMUFYi1O0TQW10Q9SMx8qoyU2g9yoqjx4o
+OCO9v8XTVtCLugMfhLUf7z98bJRNVwCuOP5Gyxd/epARA20beSYUHFI9I3Zd5Cs5
+Y3V+vnmH8GB3av99ps0UZrBGldEkjIMc9i11ZVbM2XKROxJBtUo0usSYqQnRmfaS
+TO4TV7Csszn6BU0GHFfCe63R8LI39srsvow1yWdX6D2RX1cCAwEAAaMjMCEwDgYD
+VR0PAQH/BAQDAgIEMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEB
+AHDfcFQ5bkB05vQpZAwAQt5UVHwGPmg5pJEDPxXPOQ2rZLLimcj9fNz18cE+LfPW
+sx31dhRrpckhRYsrq6GITk/BGGTn25j2NMdu+e9ZDT82fYa7pe5DQ4xSTqUyGCJ+
+jklvt1PtvLrLQz6eOkvrq5RmroR5ZZN10qTZwMmvdb05CiMjENiP9VO8R9Uop3m0
+qEbmBBvFyeUjY4dl2KBfKIbl9hBqy58G2DWswW/p5L+PPM3lY0vD6WCgPXOz52SU
+47swn97oSZ4P0N3weJ0rS+HCWS/B+mWkxhMxi0SQsBhfUmPQzeQ36ONSKt6OPKwY
+0yk9DKExZF7ksPZVunNTVjw=
+-----END CERTIFICATE-----
+
+2020-08-04T11:31:13.063809Z	info	pkica	The Citadel's public key is successfully written into configmap istio-security in namespace istio-system.
+2020-08-04T11:31:13.063898Z	info	rootcertrotator	Set up back off time 19m30s to start rotator.
+2020-08-04T11:31:13.064171Z	info	rootcertrotator	Jitter is enabled, wait 19m30s before starting root cert rotator.
+2020-08-04T11:31:13.064333Z	info	Generating istiod-signed cert for [istiod-canary.istio-system.svc istiod.istio-system.svc istiod-remote.istio-system.svc istio-pilot.istio-system.svc]
+2020-08-04T11:31:13.264379Z	info	No plugged-in cert at etc/cacerts/ca-key.pem; self-signed cert is used
+2020-08-04T11:31:13.264546Z	info	DNS certificates created in ./var/run/secrets/istio-dns
+2020-08-04T11:31:13.265211Z	info	Setting up HTTPS webhook server for istiod webhooks
+2020-08-04T11:31:13.265487Z	info	validationServer	Cert and Key reloaded
+2020-08-04T11:31:13.265621Z	info	validationServer	x509 cert [0] - Issuer: "O=cluster.local", Subject: "", SN: eb44027b800e4a5d45e0ecbc2f1f9190, NotBefore: "2020-08-04T11:31:13Z", NotAfter: "2030-08-02T11:31:13Z"
+
+2020-08-04T11:31:13.269281Z	info	Setting up event handlers
+2020-08-04T11:31:13.273169Z	info	Staring Istiod Server with primary cluster Kubernetes
+2020-08-04T11:31:13.273594Z	info	Starting Secrets controller
+2020-08-04T11:31:13.273762Z	info	Waiting for informer caches to sync
+2020-08-04T11:31:13.273838Z	info	ControlZ available at 127.0.0.1:9876
+2020-08-04T11:31:13.273932Z	info	status	Starting status follower controller
+2020-08-04T11:31:13.274008Z	info	attempting to acquire leader lease  istio-system/istio-leader...
+2020-08-04T11:31:13.275765Z	info	Starting Pilot K8S CRD controller
+2020-08-04T11:31:13.276543Z	info	controller "security.istio.io/v1beta1/RequestAuthentication" is syncing...
+2020-08-04T11:31:13.293234Z	info	ads	Starting ADS server
+2020-08-04T11:31:13.293868Z	info	Started DNS-TLS[::]:15053
+2020-08-04T11:31:13.293948Z	info	Started DNS :15053
+2020-08-04T11:31:13.294100Z	info	serverca	added client certificate authenticator
+2020-08-04T11:31:13.294154Z	info	serverca	added K8s JWT authenticator
+2020-08-04T11:31:13.294443Z	info	attempting to acquire leader lease  istio-system/istio-validation-controller-election...
+2020-08-04T11:31:13.294693Z	info	Istiod CA has started
+2020-08-04T11:31:13.294961Z	info	attempting to acquire leader lease  istio-system/istio-namespace-controller-election...
+2020-08-04T11:31:13.295197Z	info	starting gRPC discovery service at [::]:15010
+2020-08-04T11:31:13.794915Z	info	All caches have been synced up, triggering a push
+2020-08-04T11:31:13.795467Z	info	starting secure (DNS) gRPC discovery service at [::]:15012
+2020-08-04T11:31:13.841620Z	info	ads	Push debounce stable[1] 746: 108.671516ms since last change, 461.411112ms since last push, full=true
+2020-08-04T11:31:13.895087Z	info	ads	Full push, new service testapp-c.aura.svc.cluster.local
+2020-08-04T11:31:13.895129Z	info	ads	Full push, service accounts changed, testapp-c.aura.svc.cluster.local
+2020-08-04T11:31:13.895155Z	info	ads	Full push, new service klage-joark-listener.klage.svc.cluster.local
+2020-08-04T11:31:13.895167Z	info	ads	Full push, service accounts changed, klage-joark-listener.klage.svc.cluster.local
+2020-08-04T11:31:13.895187Z	info	ads	Full push, new service test-repo-please-ignore.aura.svc.cluster.local
+2020-08-04T11:31:13.895192Z	info	ads	Full push, service accounts changed, test-repo-please-ignore.aura.svc.cluster.local
+2020-08-04T11:31:13.895210Z	info	ads	Full push, new service sif-innsyn-api.dusseldorf.svc.cluster.local
+2020-08-04T11:31:13.895215Z	info	ads	Full push, service accounts changed, sif-innsyn-api.dusseldorf.svc.cluster.local
+2020-08-04T11:31:13.895231Z	info	ads	Full push, new service risk-cloudtest-app-one.risk.svc.cluster.local
+2020-08-04T11:31:13.895236Z	info	ads	Full push, service accounts changed, risk-cloudtest-app-one.risk.svc.cluster.local
+2020-08-04T11:31:13.895262Z	info	ads	Full push, new service sosialhjelp-soknad.teamdigisos.svc.cluster.local
+2020-08-04T11:31:13.895267Z	info	ads	Full push, service accounts changed, sosialhjelp-soknad.teamdigisos.svc.cluster.local
+2020-08-04T11:31:13.895293Z	info	ads	Full push, new service sykepengesok.flex.svc.cluster.local
+2020-08-04T11:31:13.895299Z	info	ads	Full push, service accounts changed, sykepengesok.flex.svc.cluster.local
+2020-08-04T11:31:13.895325Z	info	ads	Full push, new service istio-ingressgateway-nav.istio-system.svc.cluster.local
+2020-08-04T11:31:13.895331Z	info	ads	Full push, service accounts changed, istio-ingressgateway-nav.istio-system.svc.cluster.local
+2020-08-04T11:31:13.895796Z	info	ads	Full push, new service pam-stillingsok.teampam.svc.cluster.local
+2020-08-04T11:31:13.895816Z	info	ads	Full push, service accounts changed, pam-stillingsok.teampam.svc.cluster.local
+2020-08-04T11:31:13.895846Z	info	ads	Full push, new service kimfoo.aura.svc.cluster.local
+2020-08-04T11:31:13.895852Z	info	ads	Full push, service accounts changed, kimfoo.aura.svc.cluster.local
+2020-08-04T11:31:13.895871Z	info	ads	Full push, new service pii-scanner.dataplattform.svc.cluster.local
+2020-08-04T11:31:13.895877Z	info	ads	Full push, service accounts changed, pii-scanner.dataplattform.svc.cluster.local
+2020-08-04T11:31:13.895898Z	info	ads	Full push, new service unleash.dataplattform.svc.cluster.local
+2020-08-04T11:31:13.895904Z	info	ads	Full push, service accounts changed, unleash.dataplattform.svc.cluster.local
+2020-08-04T11:31:13.895923Z	info	ads	Full push, new service klage-arkiver-journalpost.klage.svc.cluster.local
+2020-08-04T11:31:13.895929Z	info	ads	Full push, service accounts changed, klage-arkiver-journalpost.klage.svc.cluster.local
+2020-08-04T11:31:13.895950Z	info	ads	Full push, new service jwker.nais.svc.cluster.local
+2020-08-04T11:31:13.895956Z	info	ads	Full push, service accounts changed, jwker.nais.svc.cluster.local
+2020-08-04T11:31:13.895979Z	info	ads	Full push, new service toolbox.plattformsikkerhet.svc.cluster.local
+2020-08-04T11:31:13.895985Z	info	ads	Full push, service accounts changed, toolbox.plattformsikkerhet.svc.cluster.local
+2020-08-04T11:31:13.896004Z	info	ads	Full push, new service cnrm-controller-manager-service.cnrm-system.svc.cluster.local
+2020-08-04T11:31:13.896028Z	info	ads	Full push, service accounts changed, cnrm-controller-manager-service.cnrm-system.svc.cluster.local
+2020-08-04T11:31:13.896060Z	info	ads	Full push, new service istio-galley.istio-system.svc.cluster.local
+2020-08-04T11:31:13.896065Z	info	ads	Full push, service accounts changed, istio-galley.istio-system.svc.cluster.local
+2020-08-04T11:31:13.896086Z	info	Handle EDS endpoints: skip updating, service cluster-autoscaler/kube-system has not been populated
+2020-08-04T11:31:13.896107Z	info	ads	Full push, new service kube-dns.kube-system.svc.cluster.local
+2020-08-04T11:31:13.896113Z	info	ads	Full push, service accounts changed, kube-dns.kube-system.svc.cluster.local
+2020-08-04T11:31:13.896148Z	info	ads	Full push, new service istiod-canary.istio-system.svc.cluster.local
+2020-08-04T11:31:13.896154Z	info	ads	Full push, service accounts changed, istiod-canary.istio-system.svc.cluster.local
+2020-08-04T11:31:13.896199Z	info	ads	Full push, new service expressionist.nais.svc.cluster.local
+2020-08-04T11:31:13.896206Z	info	ads	Full push, service accounts changed, expressionist.nais.svc.cluster.local
+2020-08-04T11:31:13.896604Z	info	ads	Full push, new service loginservice.plattformsikkerhet.svc.cluster.local
+2020-08-04T11:31:13.896622Z	info	ads	Full push, service accounts changed, loginservice.plattformsikkerhet.svc.cluster.local
+2020-08-04T11:31:13.896643Z	info	ads	Full push, new service familie-ba-dokgen.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.896649Z	info	ads	Full push, service accounts changed, familie-ba-dokgen.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.896672Z	info	ads	Full push, new service stilling-opendistro-elasticsearch-kibana.teampam.svc.cluster.local
+2020-08-04T11:31:13.896678Z	info	ads	Full push, service accounts changed, stilling-opendistro-elasticsearch-kibana.teampam.svc.cluster.local
+2020-08-04T11:31:13.896702Z	info	ads	Full push, new service smsmanager.nais.svc.cluster.local
+2020-08-04T11:31:13.896708Z	info	ads	Full push, service accounts changed, smsmanager.nais.svc.cluster.local
+2020-08-04T11:31:13.896731Z	info	ads	Full push, new service foreldrepengeoversikt.teamforeldrepenger.svc.cluster.local
+2020-08-04T11:31:13.896736Z	info	ads	Full push, service accounts changed, foreldrepengeoversikt.teamforeldrepenger.svc.cluster.local
+2020-08-04T11:31:13.896759Z	info	ads	Full push, new service foreldrepengeplanlegger.teamforeldrepenger.svc.cluster.local
+2020-08-04T11:31:13.896764Z	info	ads	Full push, service accounts changed, foreldrepengeplanlegger.teamforeldrepenger.svc.cluster.local
+2020-08-04T11:31:13.896787Z	info	ads	Full push, new service testapp-a.aura.svc.cluster.local
+2020-08-04T11:31:13.896792Z	info	ads	Full push, service accounts changed, testapp-a.aura.svc.cluster.local
+2020-08-04T11:31:13.896812Z	info	ads	Full push, new service amplitude-proxy.dataplattform.svc.cluster.local
+2020-08-04T11:31:13.896817Z	info	ads	Full push, service accounts changed, amplitude-proxy.dataplattform.svc.cluster.local
+2020-08-04T11:31:13.896842Z	info	ads	Full push, new service foreldrepengesoknad.teamforeldrepenger.svc.cluster.local
+2020-08-04T11:31:13.896848Z	info	ads	Full push, service accounts changed, foreldrepengesoknad.teamforeldrepenger.svc.cluster.local
+2020-08-04T11:31:13.896872Z	info	ads	Full push, new service istio-ingressgateway-adeo.istio-system.svc.cluster.local
+2020-08-04T11:31:13.896878Z	info	ads	Full push, service accounts changed, istio-ingressgateway-adeo.istio-system.svc.cluster.local
+2020-08-04T11:31:13.896905Z	info	ads	Full push, new service klage-dittnav-api.klage.svc.cluster.local
+2020-08-04T11:31:13.896911Z	info	ads	Full push, service accounts changed, klage-dittnav-api.klage.svc.cluster.local
+2020-08-04T11:31:13.896933Z	info	ads	Full push, new service default-http-backend.kube-system.svc.cluster.local
+2020-08-04T11:31:13.896940Z	info	ads	Full push, service accounts changed, default-http-backend.kube-system.svc.cluster.local
+2020-08-04T11:31:13.898075Z	info	ads	Full push, new service sosialhjelp-soknad-api.teamdigisos.svc.cluster.local
+2020-08-04T11:31:13.898103Z	info	ads	Full push, service accounts changed, sosialhjelp-soknad-api.teamdigisos.svc.cluster.local
+2020-08-04T11:31:13.898128Z	info	ads	Full push, new service flex-bucket-uploader.flex.svc.cluster.local
+2020-08-04T11:31:13.898136Z	info	ads	Full push, service accounts changed, flex-bucket-uploader.flex.svc.cluster.local
+2020-08-04T11:31:13.898162Z	info	ads	Full push, new service istio-telemetry.istio-system.svc.cluster.local
+2020-08-04T11:31:13.898169Z	info	ads	Full push, service accounts changed, istio-telemetry.istio-system.svc.cluster.local
+2020-08-04T11:31:13.898208Z	info	ads	Full push, new service pam-er-sync.teampam.svc.cluster.local
+2020-08-04T11:31:13.898214Z	info	ads	Full push, service accounts changed, pam-er-sync.teampam.svc.cluster.local
+2020-08-04T11:31:13.898241Z	info	ads	Full push, new service testapp-b.aura.svc.cluster.local
+2020-08-04T11:31:13.898247Z	info	ads	Full push, service accounts changed, testapp-b.aura.svc.cluster.local
+2020-08-04T11:31:13.898269Z	info	ads	Full push, new service nada-devrapid.dataplattform.svc.cluster.local
+2020-08-04T11:31:13.898275Z	info	ads	Full push, service accounts changed, nada-devrapid.dataplattform.svc.cluster.local
+2020-08-04T11:31:13.898296Z	info	ads	Full push, new service klage-vedlegg-api.klage.svc.cluster.local
+2020-08-04T11:31:13.898302Z	info	ads	Full push, service accounts changed, klage-vedlegg-api.klage.svc.cluster.local
+2020-08-04T11:31:13.898321Z	info	ads	Full push, new service familie-ef-maler.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.898327Z	info	ads	Full push, service accounts changed, familie-ef-maler.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.898347Z	info	ads	Full push, new service clamav.clamav.svc.cluster.local
+2020-08-04T11:31:13.898352Z	info	ads	Full push, service accounts changed, clamav.clamav.svc.cluster.local
+2020-08-04T11:31:13.898568Z	info	ads	Full push, new service cnrm-validating-webhook.cnrm-system.svc.cluster.local
+2020-08-04T11:31:13.898579Z	info	ads	Full push, service accounts changed, cnrm-validating-webhook.cnrm-system.svc.cluster.local
+2020-08-04T11:31:13.898599Z	info	ads	Full push, new service pam-index.teampam.svc.cluster.local
+2020-08-04T11:31:13.898604Z	info	ads	Full push, service accounts changed, pam-index.teampam.svc.cluster.local
+2020-08-04T11:31:13.898622Z	info	ads	Full push, new service pam-internalad-indexer.teampam.svc.cluster.local
+2020-08-04T11:31:13.898627Z	info	ads	Full push, service accounts changed, pam-internalad-indexer.teampam.svc.cluster.local
+2020-08-04T11:31:13.898647Z	info	ads	Full push, new service deployd.aura.svc.cluster.local
+2020-08-04T11:31:13.898653Z	info	ads	Full push, service accounts changed, deployd.aura.svc.cluster.local
+2020-08-04T11:31:13.898677Z	info	ads	Full push, new service istio-ingressgateway-devadeo.istio-system.svc.cluster.local
+2020-08-04T11:31:13.898683Z	info	ads	Full push, service accounts changed, istio-ingressgateway-devadeo.istio-system.svc.cluster.local
+2020-08-04T11:31:13.898715Z	info	ads	Full push, new service prometheus-pushgateway.nais.svc.cluster.local
+2020-08-04T11:31:13.898722Z	info	ads	Full push, service accounts changed, prometheus-pushgateway.nais.svc.cluster.local
+2020-08-04T11:31:13.898741Z	info	ads	Full push, new service familie-ba-soknad-api.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.898747Z	info	ads	Full push, service accounts changed, familie-ba-soknad-api.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.898770Z	info	ads	Full push, new service testapp.nais.svc.cluster.local
+2020-08-04T11:31:13.898775Z	info	ads	Full push, service accounts changed, testapp.nais.svc.cluster.local
+2020-08-04T11:31:13.898795Z	info	ads	Full push, new service familie-clamav.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.898802Z	info	ads	Full push, service accounts changed, familie-clamav.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.898824Z	info	ads	Full push, new service basta-frontend.aura.svc.cluster.local
+2020-08-04T11:31:13.898829Z	info	ads	Full push, service accounts changed, basta-frontend.aura.svc.cluster.local
+2020-08-04T11:31:13.898854Z	info	ads	Full push, new service istio-ingressgateway-nais.istio-system.svc.cluster.local
+2020-08-04T11:31:13.898860Z	info	ads	Full push, service accounts changed, istio-ingressgateway-nais.istio-system.svc.cluster.local
+2020-08-04T11:31:13.898894Z	info	ads	Full push, new service familie-ba-soknad.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.898900Z	info	ads	Full push, service accounts changed, familie-ba-soknad.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.898922Z	info	ads	Full push, new service detsombetyrnoe-ss2020.detsombetyrnoe.svc.cluster.local
+2020-08-04T11:31:13.898928Z	info	ads	Full push, service accounts changed, detsombetyrnoe-ss2020.detsombetyrnoe.svc.cluster.local
+2020-08-04T11:31:13.898946Z	info	ads	Full push, new service nais-deploy-canary.aura.svc.cluster.local
+2020-08-04T11:31:13.898952Z	info	ads	Full push, service accounts changed, nais-deploy-canary.aura.svc.cluster.local
+2020-08-04T11:31:13.898962Z	info	Handle EDS endpoints: skip updating, service kube-scheduler/kube-system has not been populated
+2020-08-04T11:31:13.898978Z	info	ads	Full push, new service hookd.aura.svc.cluster.local
+2020-08-04T11:31:13.898984Z	info	ads	Full push, service accounts changed, hookd.aura.svc.cluster.local
+2020-08-04T11:31:13.899004Z	info	ads	Full push, new service istio-ingressgateway-devnav.istio-system.svc.cluster.local
+2020-08-04T11:31:13.899058Z	info	ads	Full push, service accounts changed, istio-ingressgateway-devnav.istio-system.svc.cluster.local
+2020-08-04T11:31:13.899089Z	info	ads	Full push, new service dings-validate.plattformsikkerhet.svc.cluster.local
+2020-08-04T11:31:13.899095Z	info	ads	Full push, service accounts changed, dings-validate.plattformsikkerhet.svc.cluster.local
+2020-08-04T11:31:13.899114Z	info	ads	Full push, new service familie-ef-veiviser.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.899119Z	info	ads	Full push, service accounts changed, familie-ef-veiviser.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.899144Z	info	ads	Full push, new service svangerskapspengesoknad.teamforeldrepenger.svc.cluster.local
+2020-08-04T11:31:13.899153Z	info	ads	Full push, service accounts changed, svangerskapspengesoknad.teamforeldrepenger.svc.cluster.local
+2020-08-04T11:31:13.899179Z	info	ads	Full push, new service pam-import-api.teampam.svc.cluster.local
+2020-08-04T11:31:13.899186Z	info	ads	Full push, service accounts changed, pam-import-api.teampam.svc.cluster.local
+2020-08-04T11:31:13.899204Z	info	ads	Full push, new service ingress-collector.dataplattform.svc.cluster.local
+2020-08-04T11:31:13.899210Z	info	ads	Full push, service accounts changed, ingress-collector.dataplattform.svc.cluster.local
+2020-08-04T11:31:13.899238Z	info	ads	Full push, new service test-repo-please-ignore.nais.svc.cluster.local
+2020-08-04T11:31:13.899244Z	info	ads	Full push, service accounts changed, test-repo-please-ignore.nais.svc.cluster.local
+2020-08-04T11:31:13.899266Z	info	ads	Full push, new service kafkarator.dataplattform.svc.cluster.local
+2020-08-04T11:31:13.899271Z	info	ads	Full push, service accounts changed, kafkarator.dataplattform.svc.cluster.local
+2020-08-04T11:31:13.899290Z	info	ads	Full push, new service sif-innsyn.dusseldorf.svc.cluster.local
+2020-08-04T11:31:13.899295Z	info	ads	Full push, service accounts changed, sif-innsyn.dusseldorf.svc.cluster.local
+2020-08-04T11:31:13.899327Z	info	ads	Full push, new service istio-ingressgateway.istio-system.svc.cluster.local
+2020-08-04T11:31:13.899335Z	info	ads	Full push, service accounts changed, istio-ingressgateway.istio-system.svc.cluster.local
+2020-08-04T11:31:13.899414Z	info	ads	Full push, new service istio-pilot.istio-system.svc.cluster.local
+2020-08-04T11:31:13.899421Z	info	ads	Full push, service accounts changed, istio-pilot.istio-system.svc.cluster.local
+2020-08-04T11:31:13.899470Z	info	ads	Full push, new service stilling-opendistro-elasticsearch.teampam.svc.cluster.local
+2020-08-04T11:31:13.899476Z	info	ads	Full push, service accounts changed, stilling-opendistro-elasticsearch.teampam.svc.cluster.local
+2020-08-04T11:31:13.899509Z	info	ads	Full push, new service up.aura.svc.cluster.local
+2020-08-04T11:31:13.899515Z	info	ads	Full push, service accounts changed, up.aura.svc.cluster.local
+2020-08-04T11:31:13.899534Z	info	ads	Full push, new service metrics-server.kube-system.svc.cluster.local
+2020-08-04T11:31:13.899540Z	info	ads	Full push, service accounts changed, metrics-server.kube-system.svc.cluster.local
+2020-08-04T11:31:13.899698Z	info	ads	Full push, new service prometheus-server.nais.svc.cluster.local
+2020-08-04T11:31:13.899709Z	info	ads	Full push, service accounts changed, prometheus-server.nais.svc.cluster.local
+2020-08-04T11:31:13.899734Z	info	ads	Full push, new service sosialhjelp-modia.teamdigisos.svc.cluster.local
+2020-08-04T11:31:13.899741Z	info	ads	Full push, service accounts changed, sosialhjelp-modia.teamdigisos.svc.cluster.local
+2020-08-04T11:31:13.899761Z	info	ads	Full push, new service okonomi-gjeldsradgivning-veiviser.teamdigisos.svc.cluster.local
+2020-08-04T11:31:13.899767Z	info	ads	Full push, service accounts changed, okonomi-gjeldsradgivning-veiviser.teamdigisos.svc.cluster.local
+2020-08-04T11:31:13.899789Z	info	ads	Full push, new service flex-docs.flex.svc.cluster.local
+2020-08-04T11:31:13.899795Z	info	ads	Full push, service accounts changed, flex-docs.flex.svc.cluster.local
+2020-08-04T11:31:13.899818Z	info	ads	Full push, new service istio-policy.istio-system.svc.cluster.local
+2020-08-04T11:31:13.899824Z	info	ads	Full push, service accounts changed, istio-policy.istio-system.svc.cluster.local
+2020-08-04T11:31:13.899866Z	info	ads	Full push, new service loginservice-deprecated.plattformsikkerhet.svc.cluster.local
+2020-08-04T11:31:13.899872Z	info	ads	Full push, service accounts changed, loginservice-deprecated.plattformsikkerhet.svc.cluster.local
+2020-08-04T11:31:13.899902Z	info	ads	Full push, new service sosialhjelp-fagsystem-mock.teamdigisos.svc.cluster.local
+2020-08-04T11:31:13.899907Z	info	ads	Full push, service accounts changed, sosialhjelp-fagsystem-mock.teamdigisos.svc.cluster.local
+2020-08-04T11:31:13.899931Z	info	ads	Full push, new service foreldrepengesoknad-api.teamforeldrepenger.svc.cluster.local
+2020-08-04T11:31:13.899937Z	info	ads	Full push, service accounts changed, foreldrepengesoknad-api.teamforeldrepenger.svc.cluster.local
+2020-08-04T11:31:13.899959Z	info	ads	Full push, new service stilling-opendistro-elasticsearch-prometheus-exporter.teampam.svc.cluster.local
+2020-08-04T11:31:13.899965Z	info	ads	Full push, service accounts changed, stilling-opendistro-elasticsearch-prometheus-exporter.teampam.svc.cluster.local
+2020-08-04T11:31:13.899989Z	info	ads	Full push, new service kimfoo-b.aura.svc.cluster.local
+2020-08-04T11:31:13.899995Z	info	ads	Full push, service accounts changed, kimfoo-b.aura.svc.cluster.local
+2020-08-04T11:31:13.900038Z	info	ads	Full push, new service klage-dittnav-pdfgen.klage.svc.cluster.local
+2020-08-04T11:31:13.900045Z	info	ads	Full push, service accounts changed, klage-dittnav-pdfgen.klage.svc.cluster.local
+2020-08-04T11:31:13.900065Z	info	ads	Full push, new service familie-prosessering.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.900070Z	info	ads	Full push, service accounts changed, familie-prosessering.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.900103Z	info	ads	Full push, new service istio-sidecar-injector.istio-system.svc.cluster.local
+2020-08-04T11:31:13.900109Z	info	ads	Full push, service accounts changed, istio-sidecar-injector.istio-system.svc.cluster.local
+2020-08-04T11:31:13.900125Z	info	Handle EDS endpoints: skip updating, service kube-controller-manager/kube-system has not been populated
+2020-08-04T11:31:13.900150Z	info	ads	Full push, new service pam-search-api.teampam.svc.cluster.local
+2020-08-04T11:31:13.900156Z	info	ads	Full push, service accounts changed, pam-search-api.teampam.svc.cluster.local
+2020-08-04T11:31:13.900176Z	info	ads	Full push, new service deploy-frontend.aura.svc.cluster.local
+2020-08-04T11:31:13.900182Z	info	ads	Full push, service accounts changed, deploy-frontend.aura.svc.cluster.local
+2020-08-04T11:31:13.900203Z	info	ads	Full push, new service amplitude-data.dataplattform.svc.cluster.local
+2020-08-04T11:31:13.900209Z	info	ads	Full push, service accounts changed, amplitude-data.dataplattform.svc.cluster.local
+2020-08-04T11:31:13.900232Z	info	ads	Full push, new service prometheus-alertmanager.nais.svc.cluster.local
+2020-08-04T11:31:13.900237Z	info	ads	Full push, service accounts changed, prometheus-alertmanager.nais.svc.cluster.local
+2020-08-04T11:31:13.900254Z	info	ads	Full push, new service familie-ef-soknad.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.900260Z	info	ads	Full push, service accounts changed, familie-ef-soknad.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.900281Z	info	ads	Full push, new service istio-citadel.istio-system.svc.cluster.local
+2020-08-04T11:31:13.900287Z	info	ads	Full push, service accounts changed, istio-citadel.istio-system.svc.cluster.local
+2020-08-04T11:31:13.900301Z	info	Handle EDS endpoints: skip updating, service gcp-controller-manager/kube-system has not been populated
+2020-08-04T11:31:13.900316Z	info	ads	Full push, new service tokendings.plattformsikkerhet.svc.cluster.local
+2020-08-04T11:31:13.900322Z	info	ads	Full push, service accounts changed, tokendings.plattformsikkerhet.svc.cluster.local
+2020-08-04T11:31:13.900347Z	info	ads	Full push, new service sosialhjelp-innsyn-api.teamdigisos.svc.cluster.local
+2020-08-04T11:31:13.900353Z	info	ads	Full push, service accounts changed, sosialhjelp-innsyn-api.teamdigisos.svc.cluster.local
+2020-08-04T11:31:13.900376Z	info	ads	Full push, new service clamav-daemon.clamav.svc.cluster.local
+2020-08-04T11:31:13.900381Z	info	ads	Full push, service accounts changed, clamav-daemon.clamav.svc.cluster.local
+2020-08-04T11:31:13.900392Z	info	Handle EDS endpoints: skip updating, service managed-certificate-controller/kube-system has not been populated
+2020-08-04T11:31:13.900405Z	info	ads	Full push, new service azurerator.nais.svc.cluster.local
+2020-08-04T11:31:13.900410Z	info	ads	Full push, service accounts changed, azurerator.nais.svc.cluster.local
+2020-08-04T11:31:13.900428Z	info	ads	Full push, new service dingser.plattformsikkerhet.svc.cluster.local
+2020-08-04T11:31:13.900434Z	info	ads	Full push, service accounts changed, dingser.plattformsikkerhet.svc.cluster.local
+2020-08-04T11:31:13.900451Z	info	ads	Full push, new service debug.aura.svc.cluster.local
+2020-08-04T11:31:13.900457Z	info	ads	Full push, service accounts changed, debug.aura.svc.cluster.local
+2020-08-04T11:31:13.900475Z	info	ads	Full push, new service cnrm-abandon-on-uninstall-webhook-service.cnrm-system.svc.cluster.local
+2020-08-04T11:31:13.900481Z	info	ads	Full push, service accounts changed, cnrm-abandon-on-uninstall-webhook-service.cnrm-system.svc.cluster.local
+2020-08-04T11:31:13.900492Z	info	Handle EDS endpoints: skip updating, service vpa-recommender/kube-system has not been populated
+2020-08-04T11:31:13.900512Z	info	ads	Full push, new service fp-uttak-service.teamforeldrepenger.svc.cluster.local
+2020-08-04T11:31:13.900518Z	info	ads	Full push, service accounts changed, fp-uttak-service.teamforeldrepenger.svc.cluster.local
+2020-08-04T11:31:13.900536Z	info	ads	Full push, new service testapp.aura.svc.cluster.local
+2020-08-04T11:31:13.900541Z	info	ads	Full push, service accounts changed, testapp.aura.svc.cluster.local
+2020-08-04T11:31:13.900561Z	info	ads	Full push, new service go-clamav-rest.clamav.svc.cluster.local
+2020-08-04T11:31:13.900566Z	info	ads	Full push, service accounts changed, go-clamav-rest.clamav.svc.cluster.local
+2020-08-04T11:31:13.900593Z	info	ads	Full push, new service stilling-opendistro-elasticsearch-discovery.teampam.svc.cluster.local
+2020-08-04T11:31:13.900600Z	info	ads	Full push, service accounts changed, stilling-opendistro-elasticsearch-discovery.teampam.svc.cluster.local
+2020-08-04T11:31:13.900623Z	info	ads	Full push, new service cnrm-resource-stats-recorder-service.cnrm-system.svc.cluster.local
+2020-08-04T11:31:13.900629Z	info	ads	Full push, service accounts changed, cnrm-resource-stats-recorder-service.cnrm-system.svc.cluster.local
+2020-08-04T11:31:13.900645Z	info	ads	Full push, new service kubernetes.default.svc.cluster.local
+2020-08-04T11:31:13.900668Z	info	ads	Full push, new service klage-dittnav.klage.svc.cluster.local
+2020-08-04T11:31:13.900673Z	info	ads	Full push, service accounts changed, klage-dittnav.klage.svc.cluster.local
+2020-08-04T11:31:13.900695Z	info	ads	Full push, new service sosialhjelp-innsyn.teamdigisos.svc.cluster.local
+2020-08-04T11:31:13.900700Z	info	ads	Full push, service accounts changed, sosialhjelp-innsyn.teamdigisos.svc.cluster.local
+2020-08-04T11:31:13.900725Z	info	ads	Full push, new service sosialhjelp-veiviser.teamdigisos.svc.cluster.local
+2020-08-04T11:31:13.900731Z	info	ads	Full push, service accounts changed, sosialhjelp-veiviser.teamdigisos.svc.cluster.local
+2020-08-04T11:31:13.900756Z	info	ads	Full push, new service foreldrepenger-inngang.teamforeldrepenger.svc.cluster.local
+2020-08-04T11:31:13.900762Z	info	ads	Full push, service accounts changed, foreldrepenger-inngang.teamforeldrepenger.svc.cluster.local
+2020-08-04T11:31:13.900786Z	info	ads	Full push, new service pam-internal-search-api.teampam.svc.cluster.local
+2020-08-04T11:31:13.900792Z	info	ads	Full push, service accounts changed, pam-internal-search-api.teampam.svc.cluster.local
+2020-08-04T11:31:13.900814Z	info	ads	Full push, new service debug-klage.klage.svc.cluster.local
+2020-08-04T11:31:13.900821Z	info	ads	Full push, service accounts changed, debug-klage.klage.svc.cluster.local
+2020-08-04T11:31:13.900844Z	info	ads	Full push, new service calico-typha.kube-system.svc.cluster.local
+2020-08-04T11:31:13.900850Z	info	ads	Full push, service accounts changed, calico-typha.kube-system.svc.cluster.local
+2020-08-04T11:31:13.900868Z	info	ads	Full push, new service naisdevice-approval.naisdevice.svc.cluster.local
+2020-08-04T11:31:13.900873Z	info	ads	Full push, service accounts changed, naisdevice-approval.naisdevice.svc.cluster.local
+2020-08-04T11:31:13.900892Z	info	ads	Full push, new service dokocr.synt.svc.cluster.local
+2020-08-04T11:31:13.900897Z	info	ads	Full push, service accounts changed, dokocr.synt.svc.cluster.local
+2020-08-04T11:31:13.900918Z	info	ads	Full push, new service familie-ef-soknad-api.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.900923Z	info	ads	Full push, service accounts changed, familie-ef-soknad-api.teamfamilie.svc.cluster.local
+2020-08-04T11:31:13.900946Z	info	ads	Full push, new service engangsstonad.teamforeldrepenger.svc.cluster.local
+2020-08-04T11:31:13.900951Z	info	ads	Full push, service accounts changed, engangsstonad.teamforeldrepenger.svc.cluster.local
+2020-08-04T11:31:14.601899Z	info	starting Http service at [::]:8080
+2020-08-04T11:31:14.601921Z	info	ads	XDS: Pushing:2020-08-04T11:31:14Z/0 Services:468 ConnectedEndpoints:0
+2020-08-04T11:31:14.645981Z	info	ads	Push debounce stable[2] 230: 743.316191ms since last change, 753.590235ms since last push, full=true
+2020-08-04T11:31:14.646059Z	info	ads	XDS: Pushing:2020-08-04T11:31:14Z/1 Services:468 ConnectedEndpoints:0
+2020-08-04T11:31:15.487461Z	info	ads	XDS: Pushing:2020-08-04T11:31:15Z/2 Services:584 ConnectedEndpoints:0
+2020-08-04T11:31:15.532295Z	info	ads	Push debounce stable[3] 2: 100.114856ms since last change, 143.023136ms since last push, full=false
+2020-08-04T11:31:15.532388Z	info	ads	XDS:EDSInc Pushing:2020-08-04T11:31:15Z/2 Services:map[istiod-canary.istio-system.svc.cluster.local:{}] ConnectedEndpoints:0
+2020-08-04T11:31:23.234207Z	info	ads	ADS:CDS: REQ router~10.6.81.241~istio-ingressgateway-6d559ffbf4-j9t2x.istio-system~istio-system.svc.cluster.local-1 version:2020-08-04T11:30:42Z/3
+2020-08-04T11:31:23.252480Z	info	ads	CDS: PUSH for node:istio-ingressgateway-6d559ffbf4-j9t2x.istio-system clusters:384 services:584 version:2020-08-04T11:31:15Z/2
+2020-08-04T11:31:23.262815Z	info	ads	EDS: PUSH for node:istio-ingressgateway-6d559ffbf4-j9t2x.istio-system clusters:315 endpoints:498 empty:15
+2020-08-04T11:31:23.263867Z	warn	buildGatewayListeners: found 6 services on port 80: map[istio-ingressgateway-adeo.istio-system.svc.cluster.local:{} istio-ingressgateway-devadeo.istio-system.svc.cluster.local:{} istio-ingressgateway-devnav.istio-system.svc.cluster.local:{} istio-ingressgateway-nais.istio-system.svc.cluster.local:{} istio-ingressgateway-nav.istio-system.svc.cluster.local:{} istio-ingressgateway.istio-system.svc.cluster.local:{}]
+2020-08-04T11:31:23.264223Z	warn	buildGatewayListeners: found 6 services on port 443: map[istio-ingressgateway-adeo.istio-system.svc.cluster.local:{} istio-ingressgateway-devadeo.istio-system.svc.cluster.local:{} istio-ingressgateway-devnav.istio-system.svc.cluster.local:{} istio-ingressgateway-nais.istio-system.svc.cluster.local:{} istio-ingressgateway-nav.istio-system.svc.cluster.local:{} istio-ingressgateway.istio-system.svc.cluster.local:{}]
+2020-08-04T11:31:23.265253Z	info	ads	LDS: PUSH for node:istio-ingressgateway-6d559ffbf4-j9t2x.istio-system listeners:10
+2020-08-04T11:31:23.272573Z	info	ads	RDS: PUSH for node:istio-ingressgateway-6d559ffbf4-j9t2x.istio-system routes:9
+2020-08-04T11:31:23.295133Z	info	ads	Push Status: {
+    "pilot_duplicate_envoy_clusters": {
+        "outbound|443||api-gw-q1.oera.no": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||api-gw-q1.oera.no found while pushing CDS"
+        },
+        "outbound|443||api.github.com": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||api.github.com found while pushing CDS"
+        },
+        "outbound|443||appres-q0.nav.no": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||appres-q0.nav.no found while pushing CDS"
+        },
+        "outbound|443||appres-q1.nav.no": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||appres-q1.nav.no found while pushing CDS"
+        },
+        "outbound|443||appres.nav.no": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||appres.nav.no found while pushing CDS"
+        },
+        "outbound|443||b27apvl00045.preprod.local": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||b27apvl00045.preprod.local found while pushing CDS"
+        },
+        "outbound|443||b27apvl00046.preprod.local": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||b27apvl00046.preprod.local found while pushing CDS"
+        },
+        "outbound|443||b27apvl00047.preprod.local": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||b27apvl00047.preprod.local found while pushing CDS"
+        },
+        "outbound|443||database.clamav.net": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||database.clamav.net found while pushing CDS"
+        },
+        "outbound|443||familie-ba-mottak.dev-fss-pub.nais.io": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||familie-ba-mottak.dev-fss-pub.nais.io found while pushing CDS"
+        },
+        "outbound|443||graph.microsoft.com": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||graph.microsoft.com found while pushing CDS"
+        },
+        "outbound|443||login.microsoftonline.com": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||login.microsoftonline.com found while pushing CDS"
+        },
+        "outbound|443||loginservice-q.nav.no": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||loginservice-q.nav.no found while pushing CDS"
+        },
+        "outbound|443||nav.psplugin.com": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||nav.psplugin.com found while pushing CDS"
+        },
+        "outbound|443||oauth2.googleapis.com": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||oauth2.googleapis.com found while pushing CDS"
+        },
+        "outbound|443||oidc-ver2.difi.no": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||oidc-ver2.difi.no found while pushing CDS"
+        },
+        "outbound|443||pam-ad.dev-sbs.nais.io": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||pam-ad.dev-sbs.nais.io found while pushing CDS"
+        },
+        "outbound|443||storage.googleapis.com": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||storage.googleapis.com found while pushing CDS"
+        },
+        "outbound|443||tokendings.dev-gcp.nais.io": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||tokendings.dev-gcp.nais.io found while pushing CDS"
+        },
+        "outbound|443||unleashproxy.nais.oera.no": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||unleashproxy.nais.oera.no found while pushing CDS"
+        },
+        "outbound|443||www-q1.nav.no": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||www-q1.nav.no found while pushing CDS"
+        },
+        "outbound|443||www.googleapis.com": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|443||www.googleapis.com found while pushing CDS"
+        },
+        "outbound|8443||b27apvl00045.preprod.local": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|8443||b27apvl00045.preprod.local found while pushing CDS"
+        },
+        "outbound|8443||b27apvl00046.preprod.local": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|8443||b27apvl00046.preprod.local found while pushing CDS"
+        },
+        "outbound|8443||b27apvl00047.preprod.local": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|8443||b27apvl00047.preprod.local found while pushing CDS"
+        },
+        "outbound|9092||b0-pkc-e0xg5.europe-north1.gcp.confluent.cloud": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|9092||b0-pkc-e0xg5.europe-north1.gcp.confluent.cloud found while pushing CDS"
+        },
+        "outbound|9092||b1-pkc-e0xg5.europe-north1.gcp.confluent.cloud": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|9092||b1-pkc-e0xg5.europe-north1.gcp.confluent.cloud found while pushing CDS"
+        },
+        "outbound|9092||b2-pkc-e0xg5.europe-north1.gcp.confluent.cloud": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|9092||b2-pkc-e0xg5.europe-north1.gcp.confluent.cloud found while pushing CDS"
+        },
+        "outbound|9092||b3-pkc-e0xg5.europe-north1.gcp.confluent.cloud": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|9092||b3-pkc-e0xg5.europe-north1.gcp.confluent.cloud found while pushing CDS"
+        },
+        "outbound|9092||b4-pkc-e0xg5.europe-north1.gcp.confluent.cloud": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|9092||b4-pkc-e0xg5.europe-north1.gcp.confluent.cloud found while pushing CDS"
+        },
+        "outbound|9092||b5-pkc-e0xg5.europe-north1.gcp.confluent.cloud": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|9092||b5-pkc-e0xg5.europe-north1.gcp.confluent.cloud found while pushing CDS"
+        },
+        "outbound|9092||b6-pkc-e0xg5.europe-north1.gcp.confluent.cloud": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|9092||b6-pkc-e0xg5.europe-north1.gcp.confluent.cloud found while pushing CDS"
+        },
+        "outbound|9092||b7-pkc-e0xg5.europe-north1.gcp.confluent.cloud": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|9092||b7-pkc-e0xg5.europe-north1.gcp.confluent.cloud found while pushing CDS"
+        },
+        "outbound|9092||pkc-e0xg5.europe-north1.gcp.confluent.cloud": {
+            "proxy": "istio-ingressgateway-6d559ffbf4-j9t2x.istio-system",
+            "message": "Duplicate cluster outbound|9092||pkc-e0xg5.europe-north1.gcp.confluent.cloud found while pushing CDS"
+        }
+    }
+}
+2020-08-04T11:31:23.467667Z	warn	ads	ADS:LDS: ACK ERROR router~10.6.81.241~istio-ingressgateway-6d559ffbf4-j9t2x.istio-system~istio-system.svc.cluster.local-1 Internal:Error adding/updating listener(s) 0.0.0.0_445: duplicate listener 0.0.0.0_445 found
+0.0.0.0_82: duplicate listener 0.0.0.0_82 found
+
+2020-08-04T11:31:23.575190Z	info	ads	ADS:CDS: REQ router~10.6.82.38~istio-ingressgateway-6d559ffbf4-9xpw9.istio-system~istio-system.svc.cluster.local-2 version:2020-08-04T11:30:42Z/3
+2020-08-04T11:31:23.615655Z	info	ads	CDS: PUSH for node:istio-ingressgateway-6d559ffbf4-9xpw9.istio-system clusters:384 services:584 version:2020-08-04T11:31:15Z/2
+2020-08-04T11:31:23.638817Z	info	ads	EDS: PUSH for node:istio-ingressgateway-6d559ffbf4-9xpw9.istio-system clusters:315 endpoints:498 empty:15
+2020-08-04T11:31:23.639280Z	warn	buildGatewayListeners: found 6 services on port 80: map[istio-ingressgateway-adeo.istio-system.svc.cluster.local:{} istio-ingressgateway-devadeo.istio-system.svc.cluster.local:{} istio-ingressgateway-devnav.istio-system.svc.cluster.local:{} istio-ingressgateway-nais.istio-system.svc.cluster.local:{} istio-ingressgateway-nav.istio-system.svc.cluster.local:{} istio-ingressgateway.istio-system.svc.cluster.local:{}]
+2020-08-04T11:31:23.639705Z	warn	buildGatewayListeners: found 6 services on port 443: map[istio-ingressgateway-adeo.istio-system.svc.cluster.local:{} istio-ingressgateway-devadeo.istio-system.svc.cluster.local:{} istio-ingressgateway-devnav.istio-system.svc.cluster.local:{} istio-ingressgateway-nais.istio-system.svc.cluster.local:{} istio-ingressgateway-nav.istio-system.svc.cluster.local:{} istio-ingressgateway.istio-system.svc.cluster.local:{}]
+2020-08-04T11:31:23.640600Z	info	ads	LDS: PUSH for node:istio-ingressgateway-6d559ffbf4-9xpw9.istio-system listeners:10
+2020-08-04T11:31:23.655460Z	info	ads	RDS: PUSH for node:istio-ingressgateway-6d559ffbf4-9xpw9.istio-system routes:10
+2020-08-04T11:31:23.888558Z	warn	ads	ADS:LDS: ACK ERROR router~10.6.82.38~istio-ingressgateway-6d559ffbf4-9xpw9.istio-system~istio-system.svc.cluster.local-2 Internal:Error adding/updating listener(s) 0.0.0.0_82: duplicate listener 0.0.0.0_82 found
+0.0.0.0_445: duplicate listener 0.0.0.0_445 found
+
+2020-08-04T11:31:29.207313Z	info	ads	Push debounce stable[4] 2: 100.101347ms since last change, 142.011524ms since last push, full=false
+2020-08-04T11:31:29.207540Z	info	ads	XDS:EDSInc Pushing:2020-08-04T11:31:15Z/2 Services:map[detsombetyrnoe-ss2020.detsombetyrnoe.svc.cluster.local:{}] ConnectedEndpoints:2
+2020-08-04T11:31:45.248809Z	info	successfully acquired lease istio-system/istio-validation-controller-election
+2020-08-04T11:31:45.248965Z	info	Starting validation controller
+2020-08-04T11:31:45.249315Z	info	validationController	Reconcile(enter): initial request to kickstart reconciliation
+2020-08-04T11:31:45.249348Z	info	validationController	Endpoint istiod is not ready: resource not found
+2020-08-04T11:31:45.249635Z	warn	validationController	validatingwebhookconfiguration.admissionregistration.k8s.io "istiod-istio-system" not found
+2020-08-04T11:31:45.253894Z	info	validationController	Reconcile(enter): add event (admissionregistration.k8s.io/v1beta1, Kind=ValidatingWebhookConfiguration) istiod-istio-system
+2020-08-04T11:31:45.253928Z	info	validationController	Endpoint istiod is not ready: resource not found
+2020-08-04T11:31:45.254329Z	info	validationController	validatingwebhookconfiguration istiod-istio-system (failurePolicy=Ignore, resourceVersion=178168207) is up-to-date. No change required.
+2020-08-04T11:32:08.375743Z	info	ads	RDS: PUSH for node:istio-ingressgateway-6d559ffbf4-j9t2x.istio-system routes:8
+2020-08-04T11:32:08.789801Z	info	ads	RDS: PUSH for node:istio-ingressgateway-6d559ffbf4-9xpw9.istio-system routes:9
+2020-08-04T11:32:08.835700Z	info	ads	RDS: PUSH for node:istio-ingressgateway-6d559ffbf4-9xpw9.istio-system routes:8
+2020-08-04T11:35:30.708471Z	info	ads	Push debounce stable[5] 2: 100.035139ms since last change, 155.913366ms since last push, full=false
+2020-08-04T11:35:30.708598Z	info	ads	XDS:EDSInc Pushing:2020-08-04T11:31:15Z/2 Services:map[nais-deploy-canary.aura.svc.cluster.local:{}] ConnectedEndpoints:2
+2020-08-04T11:36:27.229367Z	info	ads	Push debounce stable[6] 2: 100.104995ms since last change, 114.762929ms since last push, full=false
+2020-08-04T11:36:27.229775Z	info	ads	XDS:EDSInc Pushing:2020-08-04T11:31:15Z/2 Services:map[istio-pilot.istio-system.svc.cluster.local:{}] ConnectedEndpoints:2
+2020-08-04T11:40:27.107214Z	info	ads	Push debounce stable[7] 2: 100.13169ms since last change, 141.567419ms since last push, full=false
+2020-08-04T11:40:27.107335Z	info	ads	XDS:EDSInc Pushing:2020-08-04T11:31:15Z/2 Services:map[nais-deploy-canary.aura.svc.cluster.local:{}] ConnectedEndpoints:2
+2020-08-04T11:45:38.362888Z	info	ads	Push debounce stable[8] 2: 100.17793ms since last change, 163.695423ms since last push, full=false
+2020-08-04T11:45:38.363036Z	info	ads	XDS:EDSInc Pushing:2020-08-04T11:31:15Z/2 Services:map[nais-deploy-canary.aura.svc.cluster.local:{}] ConnectedEndpoints:2
+2020-08-04T11:50:36.458816Z	info	ads	Push debounce stable[9] 2: 100.164689ms since last change, 142.538918ms since last push, full=false
+2020-08-04T11:50:36.459098Z	info	ads	XDS:EDSInc Pushing:2020-08-04T11:31:15Z/2 Services:map[nais-deploy-canary.aura.svc.cluster.local:{}] ConnectedEndpoints:2
+2020-08-04T11:50:43.064503Z	info	rootcertrotator	Jitter complete, start rotator.
