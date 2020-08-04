@@ -1,6 +1,6 @@
 We're having issues upgrading from istio 1.4.3 to 1.6.5.
 
-It seems like one gateway won't create a listener for it's configured port.
+It seems like one gateway won't create a listener for its configured port.
 
 The gateway: `ingress-gateway-dev-adeo-no` for some reason creates a listener on port 445 and 82,
 which is actually configured for the gateway: `ingress-gateway-dev-nav-no`. It should have been configured with 443/80
@@ -12,3 +12,5 @@ This gives the following error in istiod:
 ```
 
 Logs/config can be found here: https://github.com/nais/istio-issue
+
+Any advice on troubleshooting this issue would be greatly appreciated
